@@ -13,11 +13,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B package --file def/pom.xml
-
-#    steps:
+    
     - name: Cove Coverage
+      run: mvn cobertura:cobertura --file def/pom.xml
       uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }} #required
@@ -26,3 +24,9 @@ jobs:
         name: codecov-umbrella #optional
         #yml: ./codecov.yml #optional
         fail_ci_if_error: true #optional (default = false)
+    
+    - name: Build with Maven
+      run: mvn -B package --file def/pom.xml
+
+#    steps:
+    
