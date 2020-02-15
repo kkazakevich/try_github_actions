@@ -15,6 +15,8 @@ jobs:
         java-version: 1.8
 
     - name: Cove Coverage
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: mvn -B verify sonar:sonar -P sonarcloud -Dsonar.login=${{ secrets.SONAR_TOKEN }} -f def/pom.xml
 
 #    - name: Cove Coverage
