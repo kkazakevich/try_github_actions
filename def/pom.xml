@@ -23,15 +23,15 @@
                     </formats>
                     <check/>
                 </configuration>
-<!--                <executions>
-                    <execution>
-                        <id>cobertura</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>cobertura</goal>
-                        </goals>
-                    </execution>
-                </executions>-->
+                <!--                <executions>
+                                    <execution>
+                                        <id>cobertura</id>
+                                        <phase>test</phase>
+                                        <goals>
+                                            <goal>cobertura</goal>
+                                        </goals>
+                                    </execution>
+                                </executions>-->
             </plugin>
         </plugins>
     </build>
@@ -43,4 +43,11 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/kkazakevich/try_github_actions</url>
+        </repository>
+    </distributionManagement>
 </project>
