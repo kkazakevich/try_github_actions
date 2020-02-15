@@ -22,7 +22,7 @@
                 </repository>
                 <repository>
                     <id>github</id>
-                    <name>GitHub OWNER Apache Maven Packages</name>
+                    <name>GitHub Apache Maven Packages</name>
                     <url>https://maven.pkg.github.com/kkazakevich/try_github_actions</url>
                 </repository>
             </repositories>

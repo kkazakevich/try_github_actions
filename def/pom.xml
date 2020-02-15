@@ -11,27 +11,43 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+    <profiles>
+        <profile>
+            <id>sonarcloud</id>
+            <properties>
+                <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.organization>kkazakevich</sonar.organization>
+                <sonar.projectKey>kkazakevich_try_github_actions</sonar.projectKey>
+            </properties>
+        </profile>
+    </profiles>
     <build>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>cobertura-maven-plugin</artifactId>
-                <version>2.7</version>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
                 <configuration>
-                    <formats>
-                        <format>xml</format>
-                    </formats>
-                    <check/>
+                    <append>true</append>
                 </configuration>
-                <!--                <executions>
-                                    <execution>
-                                        <id>cobertura</id>
-                                        <phase>test</phase>
-                                        <goals>
-                                            <goal>cobertura</goal>
-                                        </goals>
-                                    </execution>
-                                </executions>-->
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>jacoco-site</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -43,13 +59,11 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-        <distributionManagement>
-<!--    <repositories>-->
+    <distributionManagement>
         <repository>
             <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
+            <name>GitHub Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/kkazakevich/try_github_actions</url>
         </repository>
-<!--    </repositories>-->
-        </distributionManagement>
+    </distributionManagement>
 </project>
