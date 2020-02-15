@@ -4,7 +4,7 @@
     <groupId>com.test</groupId>
     <artifactId>def</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <name>def</name>
     <url>https://github.com/kkazakevich/try_github_actions</url>
     <properties>
