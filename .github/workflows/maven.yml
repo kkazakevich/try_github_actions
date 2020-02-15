@@ -32,7 +32,7 @@ jobs:
       run: mvn -B package -f def/pom.xml
 
     - name: Publish to GitHub Repositories
-       env:
-         GITHUB_USERNAME: x-access-token
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        GITHUB_USERNAME: x-access-token
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: mvn -B deploy -f def/pom.xml -s def/settings.xml
