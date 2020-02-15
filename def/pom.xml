@@ -4,9 +4,9 @@
     <groupId>com.test</groupId>
     <artifactId>def</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <name>def</name>
-    <url>http://maven.apache.org</url>
+    <url>https://github.com/kkazakevich/try_github_actions</url>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
