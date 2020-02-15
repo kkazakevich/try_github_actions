@@ -4,7 +4,7 @@
     <groupId>com.test</groupId>
     <artifactId>def</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>def</name>
     <url>http://maven.apache.org</url>
     <properties>
