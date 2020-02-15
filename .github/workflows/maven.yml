@@ -31,5 +31,5 @@ jobs:
     - name: Build with Maven
       run: mvn -B package -f def/pom.xml
 
-     - name: Publish to GitHub Repositories
+    - name: Publish to GitHub Repositories
       run: mvn -B deploy -f def/pom.xml -Dregistry=https://maven.pkg.github.com/kkazakevich -Dtoken=GH_TOKEN
