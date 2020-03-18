@@ -43,6 +43,6 @@ jobs:
 
     - name: Publish to GitHub Actions
       env:
-        GITHUB_ACTOR: ${{ GITHUB_ACTOR }}
-        GITHUB_TOKEN: ${{ GITHUB_TOKEN }}
+        GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: mvn -B site -f def/pom.xml -s def/settings.xml
