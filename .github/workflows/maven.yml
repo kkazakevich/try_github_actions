@@ -52,6 +52,7 @@ jobs:
         git clean -fdx
         git stash pop
         git commit -m "Publish to GitHub Pages" -a
+        git push origin --delete gh-pages
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
